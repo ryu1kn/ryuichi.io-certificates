@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: ryuichi.io
+Resources:
+  StarCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: '*.ryuichi.io'
+      ValidationMethod: DNS
+Outputs:
+  StarCertificateArn:
+    Value: !Ref StarCertificate

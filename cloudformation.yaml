@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: ryuichi.io
+Description: Certificates for ryuichi.io
 Resources:
   RootCertificate:
     Type: AWS::CertificateManager::Certificate

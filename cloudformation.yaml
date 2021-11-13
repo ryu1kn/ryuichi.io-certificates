@@ -1,11 +1,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: ryuichi.io
 Resources:
+  RootCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: 'ryuichi.io'
+      ValidationMethod: DNS
   StarCertificate:
     Type: AWS::CertificateManager::Certificate
     Properties:
       DomainName: '*.ryuichi.io'
       ValidationMethod: DNS
 Outputs:
+  RootCertificateArn:
+    Value: !Ref RootCertificate
   StarCertificateArn:
     Value: !Ref StarCertificate
